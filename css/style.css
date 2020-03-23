@@ -1,0 +1,22 @@
+body {
+    background-color:#f5f5f5;
+}
+
+.container {
+    width: 1230px;
+    min-height: 1000px;
+    margin: auto;
+}
+
+.imgContainer {
+    text-align: center;
+}
+
+.thumbnailsContainer {
+    border-color: gray;
+}
+
+.thumb {
+    display: inline;
+    padding-right: 5px;
+}
