@@ -28,6 +28,36 @@ var movies = [
         Title: 'Onwards',
         Image: 'images/thumbnails/Onwards.jpg',
         Description: 'This is an action packed super hero movie'
+    },
+    {
+        Title: 'Resident Evil',
+        Image: 'images/thumbnails/residentevil.jpg',
+        Description: 'This is an action packed super hero movie'
+    },
+    {
+        Title: 'Sky Scraper',
+        Image: 'images/thumbnails/skyscraper.jpg',
+        Description: 'This is an action packed super hero movie'
+    },
+    {
+        Title: 'Star Wars',
+        Image: 'images/thumbnails/starwars.jpg',
+        Description: 'This is an action packed super hero movie'
+    },
+    {
+        Title: 'Tan Haji',
+        Image: 'images/thumbnails/tanhaji.jpg',
+        Description: 'This is an action packed super hero movie'
+    },
+    {
+        Title: 'Wonder Woman',
+        Image: 'images/thumbnails/wonderwoman.jpg',
+        Description: 'This is an action packed super hero movie'
+    },
+    {
+        Title: 'Xmen',
+        Image: 'images/thumbnails/xmen.jpg',
+        Description: 'This is an action packed super hero movie'
     }
 ];
 

@@ -19,4 +19,5 @@ body {
 .thumb {
     display: inline;
     padding-right: 5px;
+    padding-bottom: 5px;
 }
