@@ -100,3 +100,16 @@ $('.thumb').click(function() {
     // replace large image
     $(".replaceImage").attr("src", largeImageUrl);
 });
+
+
+function MakeSkyFall() {
+
+}
+
+function MakeRainFall() {
+    
+}
+
+function MakeHeavensFall() {
+    
+}
