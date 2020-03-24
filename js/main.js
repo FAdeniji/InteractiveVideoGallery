@@ -61,9 +61,42 @@ var movies = [
     }
 ];
 
-var html = '';
-for(let i = 0; i < movies.length; i++) {
-    html = html + `<div class="thumb"><img src="${movies[i].Image}" title="${movies[i].Title}" /></div>`;
-}
+var html = getHtml(movies);
 
 $(".thumbnailsContainer").html(html);
+var devs = $(".development");
+
+// functions
+function getHtml(movies) {
+    var htmlString = '';
+    for(let i = 0; i < movies.length; i++) {
+        htmlString = htmlString + `<div title="${movies[i].Title}" data-url="${movies[i].Image.replace("thumbnails", "large")}" class="thumb"><img src="${movies[i].Image}" title="${movies[i].Title}" /></div>`;
+    }
+    return htmlString;
+}
+
+
+// anonymous function does not need to be called
+(function () {
+    // alert("Hello Tolu!!");  // I will invoke myself
+})();
+// alert gets called
+
+
+// detect the clicking of all .thumb
+// using jquery
+$('.thumb').click(function() {
+
+    // find the exact html element that made the call
+    var htmlElement = $(this); // array
+    
+    // get the title
+    // var title = htmlElement[0].title;
+    // alert(title);
+
+    // get the url for the large image
+    var largeImageUrl = htmlElement.data('url');
+    
+    // replace large image
+    $(".replaceImage").attr("src", largeImageUrl);
+});
