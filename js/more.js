@@ -1,3 +1,7 @@
+// define variable to hold numb1 and numb2
+var numb1;
+var numb2;
+
 // define an array for all possible numbers and symbols
 const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "0", "-", "", "=", ""];
 
@@ -34,6 +38,44 @@ for(let i = 0; i < htmlElements.length; i++) {
 }
 
 function Display(textToDisplay) {
-    let displayValue = document.getElementsByClassName("display")[0];
-    displayValue.value = displayValue.value + textToDisplay;
+
+    if(textToDisplay == '+' || textToDisplay == '-' || textToDisplay == '=') {
+        switch(textToDisplay) {
+            case '+':
+                Add();
+            break;
+            case '-':
+                Minus();
+            break;
+            case '=':
+                EqualTo();
+            break;
+        }
+    } else {
+        // get the value in display, add textToDisplay to it
+        let displayValue = document.getElementsByClassName("display")[0];
+        displayValue.value = displayValue.value + textToDisplay;
+    }
+
+}
+
+function Add() {
+    // get the current value in display and save in numb1
+    var display = document.getElementsByClassName("display")[0];
+    numb1 = display.value;
+
+    // clear display
+    display.value = "";
+}
+
+function EqualTo() {
+    // get the current value in display and save in numb1
+    var display = document.getElementsByClassName("display")[0];
+    numb2 = display.value;
+
+    // add numb1 and numb2 together. Remember to convert numb1 and numb2 to integers
+    var numb3 = parseInt(numb1) + parseInt(numb2);
+
+    // set numb3 as display
+    display.value = numb3;
 }
