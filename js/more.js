@@ -22,12 +22,14 @@ function GetHtml(numbers) {
 var numbersContainer = document.getElementsByClassName("numbersContainer");
 
 // inject html into div
+// $('.numbersContainer').html(html);
 numbersContainer[0].innerHTML = html;
 
 // phase 2
 // get all html elements that have a calculator class
 var htmlElements = document.getElementsByClassName("calculator");
 
+// $('calculator').click(function() { get content and call display });
 // loop through all the html elements in array
 for(let i = 0; i < htmlElements.length; i++) {
     htmlElements[i].addEventListener('click', function() {
@@ -39,6 +41,7 @@ for(let i = 0; i < htmlElements.length; i++) {
 
 function Display(textToDisplay) {
 
+    // if texttodisplay is +, - or =
     if(textToDisplay == '+' || textToDisplay == '-' || textToDisplay == '=') {
         switch(textToDisplay) {
             case '+':
@@ -55,6 +58,7 @@ function Display(textToDisplay) {
         // get the value in display, add textToDisplay to it
         let displayValue = document.getElementsByClassName("display")[0];
         displayValue.value = displayValue.value + textToDisplay;
+        // $('.display').text();
     }
 
 }
