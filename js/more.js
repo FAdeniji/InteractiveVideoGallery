@@ -13,7 +13,7 @@ function GetHtml(numbers) {
 
     var htmlString = '';
     for(let i = 0; i < numbers.length; i++) {
-        htmlString += `<div class="calculator">${numbers[i]}</div>`;
+        htmlString += `<div class="calculator col-lg-3 col-md-6 col-xs-12">${numbers[i]}</div>`;
     }
     return htmlString;
 }
